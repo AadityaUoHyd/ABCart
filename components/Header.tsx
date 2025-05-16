@@ -23,31 +23,27 @@ const Header = async () => {
   return (
       <div className="bg-white sticky top-0 z-50 border-b border-b-gray-200 py-1">
         <Container>
-          <header className="flex items-center justify-between gap-4 py-2">
-            <Link href={"/"}>
-              <Image src={logo} alt="logo" className="w-24" priority />
+          <header className="flex flex-col sm:flex-row items-center justify-between gap-4 py-2 sm:py-4">
+            <Link href={"/"} className="mb-2 sm:mb-0">
+              <Image src={logo} alt="logo" className="w-20 sm:w-24" priority />
             </Link>
-            <Form
-                action="/search"
-                className="flex-1"
-            >
+            <Form action="/search" className="w-full sm:flex-1 mb-2 sm:mb-0">
               <input
                   type="text"
                   name="query"
                   placeholder="Search for products"
-                  className="bg-gray-50 text-gray-800 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 border border-gray-200 w-full rounded-md hoverEffect"
+                  className="bg-gray-50 text-gray-800 px-3 py-2 sm:px-4 sm:py-2.5 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 border border-gray-200 w-full rounded-md transition-transform hover:-translate-y-px"
               />
             </Form>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap sm:flex-nowrap">
               <CartIcon />
-              {/* User icons */}
               <ClerkLoaded>
                 <SignedIn>
                   <Link
                       href={"/orders"}
-                      className="flex items-center text-sm gap-2 border border-gray-200 px-2 py-1 rounded-md shadow-md hover:shadow-none hoverEffect"
+                      className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2 border border-gray-200 px-1 sm:px-2 py-1 rounded-md shadow-md hover:shadow-none transition-transform hover:-translate-y-px"
                   >
-                    <BsBasket className="text-2xl text-pink-500" />
+                    <BsBasket className="text-xl sm:text-2xl text-pink-500" />
                     <div className="flex flex-col">
                       <p className="text-xs">
                       <span className="font-semibold">
@@ -60,18 +56,17 @@ const Header = async () => {
                   </Link>
                   <Link
                       href={"/address"}
-                      className="flex items-center text-sm gap-2 border border-gray-200 px-2 py-1 rounded-md shadow-md hover:shadow-none hoverEffect"
+                      className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2 border border-gray-200 px-1 sm:px-2 py-1 rounded-md shadow-md hover:shadow-none transition-transform hover:-translate-y-px"
                   >
-                    <FaAddressCard className="text-2xl text-pink-500" />
+                    <FaAddressCard className="text-xl sm:text-2xl text-pink-500" />
                     <div className="flex flex-col">
                       <p className="text-xs">Manage</p>
                       <p className="font-semibold">Address</p>
                     </div>
                   </Link>
                 </SignedIn>
-
                 {user ? (
-                    <div className="flex items-center text-sm gap-2 border border-gray-200 px-2 py-1 rounded-md shadow-md hover:shadow-none hoverEffect">
+                    <div className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2 border border-gray-200 px-1 sm:px-2 py-1 rounded-md shadow-md hover:shadow-none transition-transform hover:-translate-y-px">
                       <UserButton />
                       <div className="text-xs">
                         <p className="text-gray-400">Welcome Back</p>
@@ -80,8 +75,8 @@ const Header = async () => {
                     </div>
                 ) : (
                     <SignInButton mode="modal">
-                      <div className="flex items-center text-sm gap-2 border border-gray-200 px-2 py-1 rounded-md shadow-md cursor-pointer hover:shadow-none hoverEffect">
-                        <FiUser className="text-2xl text-pink-500" />
+                      <div className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2 border border-gray-200 px-1 sm:px-2 py-1 rounded-md shadow-md cursor-pointer hover:shadow-none transition-transform hover:-translate-y-px">
+                        <FiUser className="text-xl sm:text-2xl text-pink-500" />
                         <div className="flex flex-col">
                           <p className="text-xs">Account</p>
                           <p className="font-semibold">Login</p>
