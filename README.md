@@ -1,4 +1,4 @@
-ABCart
+# ABCart
 ABCart is a modern e-commerce platform built with Next.js, designed to deliver a delightful shopping experience for Indian snacks and treats. Featuring a clean white-pink theme, ABCart offers a curated selection of products, customer reviews, and seamless contact functionality. The project leverages Sanity for content management, Clerk for authentication, and Web3Forms for contact form submissions.
 Features
 
@@ -11,7 +11,7 @@ Authentication: Clerk integration for user sign-in (used for future dynamic feat
 Social Sharing: Share product pages with the ShareButton component.
 Animations: Smooth transitions using Framer Motion.
 
-Tech Stack
+## Tech Stack
 
 Frontend: Next.js 15.3.2, React 19.0.0-rc, Tailwind CSS
 CMS: Sanity 3.88.3 for product data
@@ -24,7 +24,7 @@ Styling: Tailwind CSS, Styled Components
 Payments: Stripe (for future checkout)
 Deployment: Vercel
 
-Prerequisites
+## Prerequisites
 
 Node.js: Version 18.x or 20.x (recommended: 20.x for Vercel compatibility)
 NPM: Version 7+ (bundled with Node.js)
@@ -38,7 +38,7 @@ GitHub for repository hosting
 
 
 
-Getting Started
+## Getting Started
 1. Clone the Repository
    git clone https://github.com/your-username/abcart.git
    cd abcart
@@ -81,7 +81,7 @@ npm run build
    If you modify the Sanity schema, generate TypeScript types:
    npm run typegen
 
-Project Structure
+## Project Structure
 ABCart/
 ├── app/(client)/
 │   ├── products/[slug]/page.tsx        # Product detail page
@@ -97,7 +97,7 @@ ABCart/
 ├── next.config.js                     # Next.js configuration
 ├── tailwind.config.js                 # Tailwind CSS configuration
 
-Deployment to Vercel
+## Deployment to Vercel
 1. Push to GitHub
    Initialize Git and push to a GitHub repository:
    git init
@@ -155,7 +155,7 @@ Clerk authentication (if enabled).
 
 
 
-Troubleshooting
+## Troubleshooting
 
 Peer Dependency Errors:
 Run npm install --legacy-peer-deps locally or set in Vercel Install Command.
@@ -178,7 +178,7 @@ Verify NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.
 
 
 
-Contributing
+## Contributing
 
 Fork the repository.
 Create a branch: git checkout -b feature/your-feature.
@@ -186,7 +186,7 @@ Commit changes: git commit -m "Add your feature".
 Push: git push origin feature/your-feature.
 Open a Pull Request.
 
-License
+## License
 This project is licensed under the MIT License.
 Contact
 For questions, reach out at abcart@yopmail.com or visit /contact.
